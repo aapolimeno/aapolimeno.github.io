@@ -1,8 +1,4 @@
-@prefix ap: <https://aapolimeno.github.io/#> .
-@prefix apvocab: <https://aapolimeno.github.io/vocab#> .
-@prefix schema: <http://schema.org/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix apvocab: <https://aapolimeno.github.io/vocab.ttl> .
 
 
 # Classes
