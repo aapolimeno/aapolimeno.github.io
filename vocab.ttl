@@ -1,0 +1,50 @@
+@prefix ap: <https://aapolimeno.github.io/#> .
+@prefix apvocab: <https://aapolimeno.github.io/vocab#> .
+@prefix schema: <http://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+
+
+# Classes
+apvocab:Person 
+    a rdfs:Class;
+    rdfs:label "Person";
+    rdfs:comment "A person, living or dead.".
+
+apvocab:Organization 
+    a rdfs:Class;
+    rdfs:label "Organization";
+    rdfs:comment "An organization such as a company, institution, or group.".
+
+# Properties
+apvocab:fullName 
+    a rdf:Property;
+    rdfs:label "full name";
+    rdfs:comment "The full name of a person.".
+
+apvocab:jobTitle
+    a rdf:Property;
+    rdfs:label "job title";
+    rdfs:comment "The job title of a person.".
+
+apvocab:favoriteAnimal
+    a rdf:Property;
+    rdfs:label "favorite animal";
+    rdfs:comment "The favorite animal of a person.".
+
+apvocab:favoriteFood
+    a rdf:Property;
+    rdfs:label "favorite food";
+    rdfs:comment "The favorite food of a person.".
+
+apvocab:worksAt
+    a rdf:Property;
+    rdfs:label "works at";
+    rdfs:comment "The organization where a person works.".
+
+apvocab:knows
+    a rdf:Property;
+    rdfs:label "knows";
+    rdfs:comment "A person known by another person.".
+
+
