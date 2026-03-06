@@ -20,4 +20,4 @@
 See the full vocabulary [here](vocab.ttl).
 
 ### Data file 
-Download the data file [here](data.ttl)
+Download the data file [here](data.ttl). 
