@@ -32,14 +32,14 @@ apvocab:jobTitle
 apvocab:favoriteAnimal
     a rdf:Property;
     rdfs:label "favorite animal";
-    rdfs:range rdfs:Literal;
+    rdfs:range rdfs:Resource;
     rdfs:domain apvocab:Person;
     rdfs:comment "The favorite animal of a person.".
 
 apvocab:favoriteFood
     a rdf:Property;
     rdfs:label "favorite food";
-    rdfs:range rdfs:Literal;
+    rdfs:range rdfs:Resource;
     rdfs:domain apvocab:Person;
     rdfs:comment "The favorite food of a person.".
 
@@ -53,7 +53,7 @@ apvocab:worksAt
 apvocab:knows
     a rdf:Property;
     rdfs:label "knows"; 
-    rdfs:range rdfs:Literal; 
+    rdfs:range rdfs:Resource; 
     rdfs:domain apvocab:Person;
     rdfs:comment "A person known by another person.".
 
