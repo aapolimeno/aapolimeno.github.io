@@ -8,10 +8,10 @@
 ap:Alessandra 
     a apvocab:Person;
     apvocab:fullName "Alessandra Polimeno";
-    apvocab:worksAt <https://www.wikidata.org/wiki/Q13570995>;
+    apvocab:worksAt <https://www.wikidata.org/entity/Q13570995>;
     apvocab:jobTitle "Software developer";
-    apvocab:favoriteAnimal <https://www.wikidata.org/wiki/Q219329>; 
-    apvocab:favoriteFood <https://www.wikidata.org/wiki/Q178>;
+    apvocab:favoriteAnimal <https://www.wikidata.org/entity/Q219329>; 
+    apvocab:favoriteFood <https://www.wikidata.org/entity/Q178>;
     apvocab:knows 
-        <https://alexbrandsen.nl/kg/data/>, 
-        <https://drsteiner.github.io/knowledgegraph/person.ttl> . 
+        <https://alexbrandsen.nl/#Alex>, 
+        <https://drsteiner.github.io/knowledgegraph/person.ttl#Steiny> . 
