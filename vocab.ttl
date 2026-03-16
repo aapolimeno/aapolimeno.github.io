@@ -1,6 +1,8 @@
 @prefix apvocab: <https://aapolimeno.github.io/vocab.ttl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 
 
 # Classes
@@ -14,18 +16,25 @@ apvocab:Organization
     rdfs:label "Organization";
     rdfs:comment "An organization such as a company, institution, or group.".
 
+apvocab:Photograph 
+    a rdfs:Class;
+    rdfs:label "photograph";
+    rdfs:comment "A photograph.";
+    rdfs:subClassOf foaf:img .
+
 # Properties
 apvocab:fullName 
     a rdf:Property;
     rdfs:label "full name";
     rdfs:range rdfs:Literal;
     rdfs:domain apvocab:Person;
-    rdfs:comment "The full name of a person.".
+    rdfs:comment "The full name of a person."; 
+    owl:equivalentProperty foaf:name .
 
 apvocab:jobTitle
     a rdf:Property;
     rdfs:label "job title";
-    rdfs:range rdfs:Literal;
+    rdfs:range rdfs:Literal, rdfs:Resource;
     rdfs:domain apvocab:Person;
     rdfs:comment "The job title of a person.".
 
@@ -56,5 +65,64 @@ apvocab:knows
     rdfs:range rdfs:Resource; 
     rdfs:domain apvocab:Person;
     rdfs:comment "A person known by another person.".
+    owl:equivalentProperty foaf:knows .
 
+apvocab:location
+    a rdf:Property;
+    rdfs:label "location";
+    rdfs:range rdfs:Resource;
+    rdfs:domain apvocab:Organization, apvocab:Photograph;
+    rdfs:comment "The location of a resource. In the case of a photograph, it refers to where the photograph was taken.".
 
+apvocab:imageTitle
+    a rdf:Property;
+    rdfs:label "title";
+    rdfs:range rdfs:Literal;
+    rdfs:domain apvocab:Photograph;
+    rdfs:comment "The title of an image.".
+
+apvocab:description
+    a rdf:Property;
+    rdfs:label "description";
+    rdfs:range rdfs:Literal;
+    rdfs:domain apvocab:Photograph;
+    rdfs:comment "A description of a photograph.".
+
+apvocab:creator
+    a rdf:Property;
+    rdfs:label "creator";
+    rdfs:range apvocab:Person, rdfs:Literal;
+    rdfs:domain apvocab:Photograph;
+    rdfs:comment "The creator of a photograph.";
+    owl:equivalentProperty foaf:maker .
+
+apvocab:date
+    a rdf:Property;
+    rdfs:label "date";
+    rdfs:range rdfs:Literal;
+    rdfs:domain apvocab:Photograph;
+    rdfs:comment "The date a photograph was created.".
+
+apvocab:depicts
+    a rdf:Property;
+    rdfs:label "depicts";
+    rdfs:range rdfs:Person;
+    rdfs:domain apvocab:Photograph;
+    rdfs:comment "The persons depicted in a photograph.";
+    owl:equivalentProperty foaf:depicts .
+
+apvocab:source
+    a rdf:Property;
+    rdfs:label "source";
+    rdfs:range rdfs:Resource;
+    rdfs:domain apvocab:Photograph;
+    rdfs:comment "The source of a photograph, such as a URL or a physical location."; 
+    owl:equivalentProperty foaf:page .
+
+apvocab:topic
+    a rdf:Property;
+    rdfs:label "topic";
+    rdfs:range rdfs:Resource;
+    rdfs:domain apvocab:Photograph;
+    rdfs:comment "The topic of a photograph.";
+    owl:equivalentProperty foaf:topic .

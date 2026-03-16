@@ -3,15 +3,60 @@
 @prefix schema: <http://schema.org/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 
 ap:Alessandra 
     a apvocab:Person;
     apvocab:fullName "Alessandra Polimeno";
     apvocab:worksAt <https://www.wikidata.org/entity/Q13570995>;
-    apvocab:jobTitle "Software developer";
+    apvocab:jobTitle <https://www.wikidata.org/entity/Q5482740>;
     apvocab:favoriteAnimal <https://www.wikidata.org/entity/Q219329>; 
     apvocab:favoriteFood <https://www.wikidata.org/entity/Q178>;
     apvocab:knows 
         <https://alexbrandsen.nl/#Alex>, 
         <https://drsteiner.github.io/knowledgegraph/person.ttl#Steiny> . 
+
+
+ap:Photo1
+    a apvocab:Photograph;
+    apvocab:source <https://hetutrechtsarchief.nl/beeld/02F5327A12638C4AE0638F04000A2572>; 
+    apvocab:imageTitle "Disarmament demonstration";
+    apvocab:description "Collage van 2 foto's betreffende de ontwapeningsbetoging georganiseerd door de 'moderne arbeidersbeweging' in Utrecht; de stoet loopt op de Wittevrouwenbrug te Utrecht.";
+    apvocab:topic <https://www.wikidata.org/entity/Q331662>;
+    apvocab:date "1927-02-13"^^xsd:date;
+    apvocab:creator "Unknown" ;
+    apvocab:location <https://wikidata.org/entity/Q803> .
+
+
+ap:Photo2
+    a apvocab:Photograph;
+    apvocab:source <https://hetutrechtsarchief.nl/beeld/BFBDB64666A9507AB9FEC71C6833991A>;
+    apvocab:imageTitle "Bailey Bridge Occupation";
+    apvocab:description "Afbeelding van de bezetting van de Bailey-brug nabij het universiteitscentrum De Uithof te Utrecht voor de aanvoer van zand, door tegenstanders van de aanleg van de A27 door het landgoed Amelisweerd tussen Utrecht en Bunnik.";
+    apvocab:topic <https://www.wikidata.org/entity/Q20113959>;
+    apvocab:date "1982-09-30"^^xsd:date;
+    apvocab:creator "Lankveld, J.";
+    apvocab:location <https://wikidata.org/entity/Q803> .
+
+
+ap:Photo3
+    a apvocab:Photograph; 
+    apvocab:source <https://hetutrechtsarchief.nl/beeld/F5249628F17D4A3CE0538F04000A6324>;
+    apvocab:imageTitle "Demonstration against student finance cuts";
+    apvocab:description "Afbeelding van een demonstratie tegen de voorgenomen bezuinigingen op de studiefinanciering op de Stadhuisbrug te Utrecht.";
+    apvocab:topic <https://www.wikidata.org/entity/Q1679887>;
+    apvocab:date "1993-06-30"^^xsd:date;
+    apvocab:creator "Gussinklo, B. te," ;
+    apvocab:location <https://wikidata.org/entity/Q803> .
+
+
+ap:Photo4
+    a apvocab:Photograph;
+    apvocab:depicts ap:Alessandra;
+    apvocab:imageTitle "Alessandra at a demonstration against institutionalized racism";
+    apvocab:description "Afbeelding van Alessandra tijdens een demonstratie tegen geinstitutionaliseerd racisme op het Jaarbeursplein te Utrecht.";
+    apvocab:topic <https://www.wikidata.org/entity/Q19600530>;
+    apvocab:date "2020-06-11"^^xsd:date;
+    apvocab:creator "Onbekend" ;
+    apvocab:location <https://wikidata.org/entity/Q803> .
